@@ -31,7 +31,7 @@ opts=[];
 if rhos==0.1
     alpha=[1, 1, 1];
     opts.alpha=alpha/sum(alpha(:));
-    opts.tol = 3e-3 ; %3e-3 for 0.1椒盐peppers 5e-4 for 0.3椒盐lena
+    opts.tol = 3e-3 ; 
 end
 if rhos==0.3
     alpha=[1, 1, 1];
@@ -70,4 +70,4 @@ Time(i)= toc(t0);
 
 
 savePath= [filename,'\', data_name,'rhos', num2str(rhos),'.mat'];
-save(savePath, 'PSNRA','RSEA','SSIMA','Time','Xall','Xn','X');  %保存mat文件
+save(savePath, 'PSNRA','RSEA','SSIMA','Time','Xall','Xn','X');  
